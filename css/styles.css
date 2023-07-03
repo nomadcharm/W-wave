@@ -311,6 +311,7 @@ img {
 .hero__title--crsv {
   font-family: "MullerItalic", "Arial", sans-serif;
   font-weight: 500;
+  font-style: italic;
 }
 
 .hero__text {
@@ -509,13 +510,14 @@ img {
 
 .show-card__link {
   position: relative;
-  font-family: "MullerItalic", sans-serif;
   margin: 0;
   outline: none;
+  font-family: "MullerItalic", "Arial" sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 100%;
   color: var(--clr-mrg);
+  font-style: italic;
   z-index: 10;
   -webkit-transition: color 0.4s ease-in-out;
   -o-transition: color 0.4s ease-in-out;
@@ -832,6 +834,7 @@ img {
   margin-bottom: 12px;
   font-family: "MullerItalic", sans-serif;
   font-weight: 300;
+  font-style: italic;
 }
 
 .playlists__age {
