@@ -724,7 +724,7 @@ img {
 
 .guest-card__img {
   display: block;
-  width: 432px;
+  max-width: 432px;
   height: 100%;
 }
 
