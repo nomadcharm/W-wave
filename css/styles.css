@@ -74,7 +74,7 @@ img {
 
 @font-face {
   font-family: "MullerItalic";
-  src: local("MullerBold"), url("../fonts/MullerRegularItalic.woff2") format("woff2"),
+  src: local("MullerItalic"), url("../fonts/MullerRegularItalic.woff2") format("woff2"),
     url("../fonts/MullerRegularItalic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
@@ -309,7 +309,7 @@ img {
 }
 
 .hero__title--crsv {
-  font-family: "MullerItalic";
+  font-family: "MullerItalic", "Arial", sans-serif;
   font-weight: 500;
 }
 
