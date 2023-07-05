@@ -188,9 +188,9 @@
     background-color: transparent;
   }
 
-  .socials__link--yt:focus path,
-  .socials__link--ok:focus path,
-  .socials__link--vk:focus path {
+  .socials__link--yt:focus-visible path,
+  .socials__link--ok:focus-visible path,
+  .socials__link--vk:focus-visible path {
     fill: var(--clr-mlrs);
   }
 
