@@ -382,7 +382,7 @@
           <li class="guests__item">
             <div class="guest-card">
               <picture>
-                <source media="(min-width: 993px)" srcset="img/guest-photo-1.webp" width="432px">
+                <source media="(min-width: 993px)" srcset="img/guest-photo-1.webp" width="432">
                 <source media="(min-width: 577px)" srcset="img/guest-photo-1-768.webp">
                 <source media="(min-width: 320px)" srcset="img/guest-photo-1-320.webp">
                 <img class="guest-card__img" src="img/guest-photo-1.jpg" alt="Наш гость Ольга Мартынова">
@@ -401,7 +401,7 @@
           <li class="guests__item">
             <div class="guest-card">
               <picture>
-                <source media="(min-width: 993px)" srcset="img/guest-photo-2.webp" width="432px">
+                <source media="(min-width: 993px)" srcset="img/guest-photo-2.webp" width="432">
                 <source media="(min-width: 577px)" srcset="img/guest-photo-2-768.webp">
                 <source media="(min-width: 320px)" srcset="img/guest-photo-2-320.webp">
                 <img class="guest-card__img" src="img/guest-photo-2.jpg" alt="Наш гость Денис Гришин">
@@ -420,7 +420,7 @@
           <li class="guests__item">
             <div class="guest-card">
               <picture>
-                <source media="(min-width: 993px)" srcset="img/guest-photo-3.webp" width="432px">
+                <source media="(min-width: 993px)" srcset="img/guest-photo-3.webp" width="432">
                 <source media="(min-width: 577px)" srcset="img/guest-photo-3-768.webp">
                 <source media="(min-width: 320px)" srcset="img/guest-photo-3-320.webp">
                 <img class="guest-card__img" src="img/guest-photo-3.jpg" alt="Наш гость Ольга Мартынова">
@@ -757,11 +757,12 @@
             <label class="visually-hidden" for="name">Введите имя</label>
             <input class="form__input form__text" type="text" name="Имя" id="name" placeholder="Имя" required>
             <label class="visually-hidden" for="email">Введите email</label>
-            <input class="form__input form__text" type="email" name="Email" id="email" placeholder="Email" required>
+            <input class="form__input form__text" type="email" name="Email" id="email" placeholder="Email" required
+              autocomplete="email">
             <button class="button-vlt form__button">Отправить</button>
           </div>
           <label class="form__checkbox checkbox">
-            <input class="checkbox__custom" type="checkbox" name="Checkbox" checked>
+            <input class="checkbox__custom" type="checkbox" name="Checkbox" checked required>
             <span class="checkbox__text">Согласен на обработку персональных данных</span>
           </label>
         </form>
