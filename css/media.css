@@ -792,11 +792,10 @@
     padding-bottom: 3px;
     overflow-x: scroll;
     white-space: nowrap;
-    scrollbar-width: 0px;
+    scrollbar-width: none;
   }
 
   ::-webkit-scrollbar {
-    width: 0px;
     height: 0px;
   }
 
