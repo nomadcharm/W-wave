@@ -1228,6 +1228,7 @@ img {
   outline: 2px solid transparent;
   outline-offset: 5px;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
   -webkit-transition: outline-color 0.4s ease-in-out;
   -o-transition: outline-color 0.4s ease-in-out;
   transition: outline-color 0.4s ease-in-out;
