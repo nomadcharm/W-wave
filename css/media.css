@@ -208,7 +208,6 @@
 
 }
 
-
 @media (hover: none) and (pointer: coarse) {
 
   .button-vlt:focus {
@@ -464,6 +463,10 @@
     gap: 18px;
   }
 
+  .playlists__container {
+    padding-bottom: 94px;
+  }
+
   .playlists__item {
     width: calc((100% - ((var(--gap-30)) * 2)) / 3);
   }
@@ -519,6 +522,7 @@
   }
 
   .about__content {
+    margin-bottom: 28px;
     width: 65%;
   }
 
@@ -693,8 +697,12 @@
     width: 134%;
   }
 
+  .offer__text:last-of-type {
+    margin-bottom: 28px;
+  }
+
   .about__content {
-    margin-bottom: 172px;
+    margin-bottom: 173px;
     width: 100%
   }
 
@@ -1036,7 +1044,7 @@
 
   .offer__container {
     gap: 41px;
-    padding-bottom: 56px;
+    padding-bottom: 55px;
   }
 
   .offer__picture::before {
@@ -1058,6 +1066,10 @@
   .offer__text {
     font-size: 14px;
     line-height: 158%;
+  }
+
+  .offer__text:not(:last-child) {
+    margin-bottom: 12px;
   }
 
   .offer__text:last-of-type {
@@ -1098,6 +1110,10 @@
 
   .about__content::before {
     display: none;
+  }
+
+  .about__list {
+    margin-bottom: 29px;
   }
 
   .about-card__content {
@@ -1158,7 +1174,7 @@
 
   .footer__container {
     gap: 84px;
-    padding-top: 54px;
+    padding-top: 52px;
     padding-bottom: 82px;
   }
 
