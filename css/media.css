@@ -470,6 +470,7 @@
 
   .playlist-card__img {
     width: 112px;
+    height: 100%;
   }
 
   .playlist-card {
@@ -795,7 +796,7 @@
     scrollbar-width: none;
   }
 
-  ::-webkit-scrollbar {
+  .header__nav::-webkit-scrollbar {
     height: 0px;
   }
 

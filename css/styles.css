@@ -1106,7 +1106,14 @@ img {
   -webkit-transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out, 0.4s ease-in-out;
   -o-transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out, 0.4s ease-in-out;
   transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out, 0.4s ease-in-out;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
+
+.form__textarea::-webkit-scrollbar {
+  height: 0px;
+}
+
 
 .form__input {
   flex-basis: 48.3%;
