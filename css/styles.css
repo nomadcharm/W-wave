@@ -32,6 +32,7 @@ img {
   --clr-wht: #ffffff;
   --clr-bff: #f0d288;
   --clr-tssck: #bb973e;
+  --clr-thbrd: #d52b1e;
 
   --gap-30: 30px;
 }
@@ -1112,6 +1113,17 @@ img {
   height: 0px;
 }
 
+.form__textarea:invalid:not(:placeholder-shown) {
+  color: var(--clr-wht);
+  border-color: var(--clr-thbrd);
+  background-color: transparent;
+}
+
+.form__textarea:valid {
+  border-color: var(--clr-wht);
+  color: var(--clr-wht);
+  background-color: transparent;
+}
 
 .form__input {
   flex-basis: 48.3%;
@@ -1123,6 +1135,30 @@ img {
   color: var(--clr-cht);
   background-color: transparent;
   transition: color 0.4s ease-in-out, 0.4s ease-in-out, 0.4s ease-in-out;
+}
+
+.form__input[type=text]:invalid:not(:placeholder-shown) {
+  border-color: var(--clr-thbrd);
+  color: var(--clr-wht);
+  background-color: transparent;
+}
+
+.form__input[type=text]:valid {
+  border-color: var(--clr-wht);
+  color: var(--clr-wht);
+  background-color: transparent;
+}
+
+.form__input[type=email]:invalid:not(:placeholder-shown) {
+  border-color: var(--clr-thbrd);
+  color: var(--clr-wht);
+  background-color: transparent;
+}
+
+.form__input[type=email]:valid {
+  border-color: var(--clr-wht);
+  color: var(--clr-wht);
+  background-color: transparent;
 }
 
 .form__checkbox {
