@@ -367,14 +367,14 @@
 
   .header {
     position: relative;
+    padding-top: 28px;
+    padding-bottom: 21px;
   }
 
   .header__container {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding-top: 28px;
-    padding-bottom: 21px;
   }
 
   .header__logo {
@@ -398,6 +398,7 @@
   .header::after {
     content: "";
     position: absolute;
+    bottom: 0;
     width: 100%;
     height: 1px;
     background-color: var(--clr-thns);
@@ -412,20 +413,27 @@
     background-color: var(--clr-thns);
   }
 
-  .hero__container {
+  .hero {
     padding-bottom: 90px;
-    background-size: 262px 262px;
   }
 
   .hero__content {
     width: 65%;
   }
 
+  .hero__content::after {
+    top: -2%;
+    left: 105%;
+    width: 262px;
+    height: 262px;
+    background-size: 262px 262px;
+  }
+
   .hero__text {
     margin-bottom: 19px;
   }
 
-  .shows__container {
+  .shows {
     padding-bottom: 96px;
   }
 
@@ -434,7 +442,7 @@
   }
 
   .shows__archive {
-    top: 70.7%;
+    top: 75.7%;
     gap: 23px;
     width: calc(33% - var(--gap-30));
   }
@@ -455,16 +463,17 @@
     width: 100%;
   }
 
+  .playlists {
+    padding-bottom: 94px;
+
+  }
+
   .playlists__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 18px;
-  }
-
-  .playlists__container {
-    padding-bottom: 94px;
   }
 
   .playlists__item {
@@ -491,7 +500,7 @@
     padding: 38px 6px 38px 10px;
   }
 
-  .offer__container {
+  .offer {
     padding-bottom: 94px;
   }
 
@@ -517,7 +526,7 @@
     background-size: 98px 98px;
   }
 
-  .about__container {
+  .about {
     padding-bottom: 91px;
   }
 
@@ -572,8 +581,8 @@
     font-size: 16px;
   }
 
-  .hero__container {
-    background-image: none;
+  .hero__content::after  {
+    display: none;
   }
 
   .hero__content {
@@ -584,7 +593,7 @@
     width: 100%;
   }
 
-  .shows__container {
+  .shows {
     padding-bottom: 28px;
   }
 
@@ -637,7 +646,7 @@
     position: relative;
   }
 
-  .guests__container {
+  .guests {
     padding-bottom: 96px;
   }
 
@@ -660,12 +669,16 @@
     width: 67%;
   }
 
-  .playlists__container {
+  .playlists {
     padding-bottom: 112px;
   }
 
   .playlists__item {
     width: calc((100% - ((var(--gap-30)) * 1)) / 2);
+  }
+
+  .offer {
+    padding-top: 50px;
   }
 
   .offer__container {
@@ -674,7 +687,6 @@
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 56px;
-    padding-top: 50px;
   }
 
   .offer__picture {
@@ -756,8 +768,8 @@
     height: 36px;
   }
 
-  .footer__container {
-    padding-bottom: 127px;
+  .footer {
+    padding-bottom: 126px;
   }
 
   .footer__nav {
@@ -782,7 +794,7 @@
     top: 55px;
   }
 
-  .header__container {
+  .header {
     padding-top: 15px;
     padding-bottom: 13px;
   }
@@ -812,7 +824,7 @@
     gap: 27px;
   }
 
-  .hero__container {
+  .hero {
     padding-top: 42px;
     padding-bottom: 42px;
   }
@@ -835,7 +847,7 @@
     font-size: 24px;
   }
 
-  .podcasts__container {
+  .podcasts {
     padding-top: 54px;
     padding-bottom: 54px;
   }
@@ -871,7 +883,7 @@
     width: 100%;
   }
 
-  .shows__container {
+  .shows {
     padding-top: 55px;
     padding-bottom: 54px;
   }
@@ -949,7 +961,7 @@
     bottom: -31px;
   }
 
-  .guests__container {
+  .guests {
     padding-top: 54px;
     padding-bottom: 56px;
   }
@@ -995,7 +1007,7 @@
     padding: 6px 13px;
   }
 
-  .playlists__container {
+  .playlists {
     padding-top: 54px;
     padding-bottom: 53px;
   }
@@ -1042,9 +1054,12 @@
     width: 100%;
   }
 
+  .offer {
+    padding-bottom: 55px;
+  }
+
   .offer__container {
     gap: 41px;
-    padding-bottom: 55px;
   }
 
   .offer__picture::before {
@@ -1086,7 +1101,7 @@
     font-size: 16px;
   }
 
-  .about__container {
+  .about {
     padding-top: 54px;
     padding-bottom: 54px;
   }
@@ -1172,10 +1187,13 @@
     background-position: -8px;
   }
 
-  .footer__container {
-    gap: 84px;
+  .footer {
     padding-top: 52px;
     padding-bottom: 82px;
+  }
+
+  .footer__container {
+    gap: 84px;
   }
 
   .footer__nav {
