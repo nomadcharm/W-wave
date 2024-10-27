@@ -18,6 +18,12 @@ const svgSprite = require('gulp-svg-sprite');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const typograf = require('gulp-typograf');
 const webp = require('gulp-webp');
+const gulp = require('gulp');
+const ghPages = require('gh-pages');
+
+gulp.task('deploy', function() {
+  return ghPages.publish('dist');
+});
 
 let prodBuild = false;
 
