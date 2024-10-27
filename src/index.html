@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="На связи  радио W-Wave! Раньше мы были изданием, а теперь пробуем себя
+  в разговорном жанре. Говорим о музыке, политике, истории, науке и культуре.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/libs/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>W-Wave Radio</title>
+</head>
+
+<body class="body">
+  @include("partials/header.html")
+
+  <main class="main">
+    @include("partials/hero.html")
+    @include("partials/podcasts.html")
+    @include("partials/shows.html")
+    @include("partials/guests.html")
+    @include("partials/playlists.html")
+    @include("partials/offer.html")
+    @include("partials/about.html")
+  </main>
+
+  @include("partials/footer.html")
+</body>
+
+</html>

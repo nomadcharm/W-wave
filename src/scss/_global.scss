@@ -1,0 +1,81 @@
+@use "./mixins/breakpoints" as *;
+@use "./mixins/hover" as *;
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @include desktop-1200 {
+    max-width: 852px;
+  }
+
+  @include tablet-992 {
+    max-width: 569px;
+  }
+
+  @include mobile-576 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.section-title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--clr-mrg);
+
+  @include mobile-576 {
+    font-size: 24px;
+  }
+}
+
+.button-vlt {
+  display: inline-block;
+  padding: 23px 52px 23px 53px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  color: var(--clr-wht);
+  background-color: var(--clr-lcvlt);
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+
+  &:focus {
+    border-color: var(--clr-dsbsh);
+    background-color: var(--clr-mlrs);
+  }
+
+  @include hover {
+    background-color: var(--clr-mlrs);
+  }
+
+  &:active {
+    border-color: transparent;
+    background-color: var(--clr-dsbsh);
+  }
+
+  @include mobile-576 {
+    padding: 13px 43px;
+    font-size: 16px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

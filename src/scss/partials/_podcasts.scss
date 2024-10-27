@@ -1,0 +1,115 @@
+@use "../mixins/breakpoints" as *;
+
+.podcasts {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--clr-thns);
+
+  @include mobile-576 {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    @include mobile-576 {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-30);
+  }
+
+  &__item {
+    display: flex;
+    width: calc((100% - var(--gap-30)) / 2);
+
+    @include tablet-992 {
+      width: 100%;
+    }
+  }
+}
+
+.podcast-card {
+  position: relative;
+  display: flex;
+  flex: 1;
+  background-color: var(--clr-wht);
+
+  @include mobile-576 {
+    flex-direction: column;
+  }
+
+  &__date {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 3px 6px;
+    width: 51px;
+    height: 16px;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--clr-mrg);
+    background-color: var(--clr-thns);
+
+    @include mobile-576 {
+      top: 0;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 112px;
+    height: 100%;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 38px 30px;
+
+    @include mobile-576 {
+      padding: 30px 16px;
+    }
+  }
+
+  &__duration {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: var(--clr-mrg);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 1px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--clr-mrg);
+
+    @include mobile-576 {
+      font-size: 16px;
+    }
+  }
+
+  &__presenter {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--clr-cht);
+
+    @include mobile-576 {
+      font-size: 12px;
+    }
+  }
+
+  &__img {
+    @include mobile-576 {
+      width: 100%;
+    }
+  }
+}

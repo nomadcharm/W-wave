@@ -1,0 +1,191 @@
+@use "../mixins/breakpoints" as *;
+@use "../mixins/hover" as *;
+
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: white;
+
+  @include desktop-1200 {
+    position: relative;
+    padding-top: 28px;
+    padding-bottom: 21px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--clr-thns);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 80px;
+      width: 100%;
+      height: 1px;
+      background-color: var(--clr-thns);
+    }
+
+    @include mobile-576 {
+      padding-top: 15px;
+      padding-bottom: 13px;
+
+      &::before {
+        top: 55px;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include desktop-1200 {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    margin-right: 80px;
+    outline: 2px solid transparent;
+    outline-offset: 5px;
+    transition: outline-color 0.4s ease-in-out;
+
+    &:focus {
+      outline-color: var(--clr-lcvlt);
+    }
+
+    @include desktop-1200 {
+      margin: 0;
+      width: 112px;
+      height: 14px;
+    }
+
+    @include mobile-576 {
+      width: 87px;
+      height: 10px;
+    }
+  }
+
+  &__nav {
+    margin-right: auto;
+
+    @include desktop-1200 {
+      padding-top: 50px;
+      order: 3;
+      width: 100%;
+    }
+
+    @include mobile-576 {
+      padding-top: 33px;
+      padding-bottom: 3px;
+      padding-right: 0;
+      overflow-x: scroll;
+      white-space: nowrap;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        height: 0px;
+      }
+
+    }
+  }
+
+  &__button {
+    &>svg {
+      stroke: var(--clr-lcvlt);
+      transition: stroke 0.4s ease-in-out;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus {
+      &>svg {
+        stroke: var(--clr-mlrs);
+      }
+    }
+
+    @include hover {
+      &>svg {
+        stroke: var(--clr-mlrs);
+      }
+    }
+
+    &:active {
+      stroke: var(--clr-dsbsh);
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: 59px;
+
+    @include desktop-1200 {
+      gap: 105.5px;
+    }
+
+    @include tablet-992 {
+      gap: 54px;
+    }
+
+    @include mobile-576 {
+      gap: 27px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    outline: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--clr-mrg);
+    transition: color 0.4s ease-in-out;
+    cursor: pointer;
+    z-index: 10;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      bottom: -3px;
+      left: -3px;
+      right: -3px;
+      background-color: transparent;
+      z-index: -10;
+      transition: background-color 0.4s ease-in-out;
+    }
+
+    &:focus {
+      color: var(--clr-wht);
+
+      &::before {
+        background-color: var(--clr-mlrs);
+      }
+    }
+
+    @include hover {
+      color: var(--clr-lcvlt);
+    }
+
+    &:active {
+      color: var(--clr-dsbsh);
+
+      &::before {
+        background-color: transparent;
+      }
+    }
+
+    @include tablet-992 {
+      font-size: 16px;
+    }
+  }
+}

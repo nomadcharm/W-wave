@@ -1,0 +1,192 @@
+@use "../mixins/breakpoints" as *;
+@use "../mixins/hover" as *;
+
+.footer {
+  position: relative;
+  padding-top: 94px;
+  padding-bottom: 134px;
+  background-color: var(--clr-chrd);
+  overflow: hidden;
+
+  @include tablet-992 {
+    padding-bottom: 126px;
+  }
+
+  @include mobile-576 {
+    padding-top: 52px;
+    padding-bottom: 82px;
+  }
+
+  @include mobile-576 {
+    &::before {
+      position: absolute;
+      content: '';
+      top: 183px;
+      left: 0;
+      right: 0;
+      height: 216px;
+      background-color: var(--clr-mrg);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 87%;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-image: url("../assets/img/wave-footer.svg");
+    background-position: -16px;
+
+    @include tablet-992 {
+      top: 90%;
+    }
+
+    @include mobile-576 {
+      background-position: -8px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 80px;
+
+    @include tablet-992 {
+      flex-direction: column;
+    }
+
+    @include mobile-576 {
+      gap: 84px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: calc(60% - 80px);
+
+    @include desktop-1200 {
+      width: calc(46% - 80px);
+    }
+
+    @include tablet-992 {
+      align-items: center;
+      width: auto;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 21px;
+    outline: none;
+    outline: 2px solid transparent;
+    outline-offset: 5px;
+    transition: outline-color 0.4s ease-in-out;
+
+    &:focus {
+      outline-color: var(--clr-lcvlt);
+    }
+
+    @include tablet-992 {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 21px;
+  }
+
+  &__right {
+    width: 40%;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-count: 3;
+    gap: 20px 106px;
+    height: 88px;
+
+    @include desktop-1200 {
+      gap: 20px 109px;
+    }
+
+    @include tablet-992 {
+      gap: 30px 156px;
+      height: 108px;
+    }
+
+    @include mobile-576 {
+      column-count: 2;
+      gap: 24px 78px;
+      height: 156px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    text-align: left;
+    color: var(--clr-wht);
+
+    @include mobile-576 {
+      font-size: 12px;
+    }
+  }
+
+  &__copy {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    margin: 0;
+    font-size: 16px;
+    line-height: 103.336%;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    color: var(--clr-cht);
+
+    @include tablet-992 {
+      bottom: 2.5%;
+    }
+
+    @include mobile-576 {
+      font-size: 12px;
+    }
+  }
+}
+
+.socials {
+  &__link {
+    outline: none;
+
+    @include tablet-992 {
+      &>svg {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    &--yt>svg,
+    &--ok>svg,
+    &--vk>svg {
+      fill: #d2d5dd;
+      transition: fill 0.4s ease-in-out;
+
+      &:focus-visible {
+        fill: var(--clr-mlrs);
+      }
+
+      @include hover {
+        fill: var(--clr-lcvlt);
+      }
+
+      &:active {
+        fill: var(--clr-dsbsh);
+      }
+    }
+
+  }
+}

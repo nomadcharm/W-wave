@@ -1,0 +1,89 @@
+@use "../mixins/breakpoints" as *;
+
+.hero {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: white;
+
+  @include desktop-1200 {
+    padding-bottom: 90px;
+  }
+
+  @include mobile-576 {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  &__content {
+    position: relative;
+    width: 55%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -22%;
+      left: 124%;
+      width: 350px;
+      height: 372px;
+      background-image: url("../assets/img/microphone.png");
+      background-repeat: no-repeat;
+      background-size: 350px 372px;
+    }
+
+    @include desktop-1200 {
+      width: 65%;
+
+      &::after {
+        top: -2%;
+        left: 105%;
+        width: 262px;
+        height: 262px;
+        background-size: 262px 262px;
+      }
+    }
+
+    @include tablet-992 {
+      width: 100%;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 100%;
+    color: var(--clr-mrg);
+
+    @include mobile-576 {
+      margin-bottom: 7px;
+      font-size: 32px;
+    }
+  }
+
+  &__title--crsv {
+    font-family: "MullerItalic", "Arial", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 46px;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--clr-mrg);
+
+    @include desktop-1200 {
+      margin-bottom: 19px;
+    }
+
+    @include mobile-576 {
+    font-size: 14px;
+    }
+  }
+}
